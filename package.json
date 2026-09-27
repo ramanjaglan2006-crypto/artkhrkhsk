@@ -1,6 +1,10 @@
 {
     "name": "arth-monorepo",
     "version": "1.0.0",
+    "workspaces": [
+        "frontend",
+        "backend"
+    ],
     "scripts": {
         "build": "npm run build --prefix frontend"
     },
