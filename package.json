@@ -1,12 +1,8 @@
 {
     "name": "arth-monorepo",
     "version": "1.0.0",
-    "workspaces": [
-        "frontend",
-        "backend"
-    ],
     "scripts": {
-        "build": "npm run build --prefix frontend"
+        "build": "npm install --prefix frontend && npm run build --prefix frontend"
     },
     "dependencies": {
         "@google/generative-ai": "^0.24.1",

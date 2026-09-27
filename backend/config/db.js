@@ -3,21 +3,25 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+let isConnected = false;
+
 const connectDB = async () => {
-    const tryConnect = async () => {
-        try {
-            const conn = await mongoose.connect(process.env.MONGO_URI, {
-                serverSelectionTimeoutMS: 8000,
-            });
-            console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
-        } catch (error) {
-            console.error(`❌ MongoDB connection failed: ${error.message}`);
-            console.error('👉 Fix: Go to MongoDB Atlas → Network Access → Add your current IP address (or 0.0.0.0/0 for dev)');
-            console.log('🔄 Retrying connection in 5 seconds...');
-            setTimeout(tryConnect, 5000);
-        }
-    };
-    await tryConnect();
+    if (isConnected) return;
+
+    if (!process.env.MONGO_URI) {
+        console.warn('⚠️ MONGO_URI is not defined in environment variables. Database operations will be skipped or mocked.');
+        return;
+    }
+
+    try {
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
+            serverSelectionTimeoutMS: 5000,
+        });
+        isConnected = true;
+        console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.error(`❌ MongoDB connection failed: ${error.message}`);
+    }
 };
 
 module.exports = connectDB;
