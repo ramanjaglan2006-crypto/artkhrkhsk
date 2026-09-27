@@ -28,7 +28,7 @@ const FamilyModule = () => {
                 </div>
                 <div className="shared-wallet-cta">
                     <div className="avatar-group">
-                        <div className="avatar">A</div>
+                        <div className="avatar">R</div>
                         <div className="avatar">P</div>
                         <div className="avatar">+</div>
                     </div>

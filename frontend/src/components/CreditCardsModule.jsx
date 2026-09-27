@@ -11,7 +11,7 @@ const CreditCardsModule = ({ onBack }) => {
   const [cards, setCards] = useState([
     {
       id: 1,
-      holder: 'ARYAN SHARMA',
+      holder: 'RAMAN KUMAR',
       number: '4582842100449912',
       expiry: '08/29',
       cvv: '123',
@@ -27,7 +27,7 @@ const CreditCardsModule = ({ onBack }) => {
     },
     {
       id: 2,
-      holder: 'ARYAN SHARMA',
+      holder: 'RAMAN KUMAR',
       number: '5241993344558877',
       expiry: '12/27',
       cvv: '998',

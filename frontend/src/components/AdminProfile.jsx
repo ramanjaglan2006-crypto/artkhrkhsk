@@ -47,13 +47,13 @@ const AdminProfile = () => {
             <div className="profile-hero">
                 <div className="hero-content">
                     <span className="hero-eyebrow">Identity Management</span>
-                    <h1>Aryan's Strategy Root</h1>
+                    <h1>Raman's Strategy Root</h1>
                     <p>Security and personalization control center</p>
                 </div>
                 <div className="profile-badge-v2">
-                    <div className="profile-pic">A</div>
+                    <div className="profile-pic">R</div>
                     <div className="profile-meta">
-                        <strong>ARYAN</strong>
+                        <strong>RAMAN KUMAR</strong>
                         <span>PRO MEMBER</span>
                     </div>
                 </div>

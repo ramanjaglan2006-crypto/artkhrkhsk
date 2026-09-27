@@ -45,9 +45,9 @@ const TopBar = ({ onToggleSidebar, onNavigate, isSidebarOpen, showProfile = true
           {showProfile && (
             <div className="profile-pill" onClick={() => onNavigate('Settings')}>
               <div className="pill-avatar">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rohan" alt="Rohan" />
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Raman" alt="Raman" />
               </div>
-              <span className="pill-name">Rohan Sharma</span>
+              <span className="pill-name">Raman Kumar</span>
             </div>
           )}
         </div>
